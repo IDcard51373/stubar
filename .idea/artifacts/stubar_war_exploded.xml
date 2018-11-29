@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="stubar:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="stubar:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/stubar_war_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="stubar/web/Web" />

@@ -1,7 +1,6 @@
 /**
  * 接口 服务器-数据库
  */
-
 public interface DBControlInterface {
 
     //注册功能。

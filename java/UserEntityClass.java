@@ -10,7 +10,7 @@ public class UserEntityClass {
     private String Birthday;
 
     public void setUser_id(String a) {
-        User_id = a;
+        this.User_id = a;
     }
 
     public String getUser_id() {
@@ -18,7 +18,7 @@ public class UserEntityClass {
     }
 
     public void setUser_name(String a) {
-        User_name = a;
+        this.User_name = a;
     }
 
     public String getUser_name() {
@@ -26,7 +26,7 @@ public class UserEntityClass {
     }
 
     public void setPassword(String a) {
-        Password = a;
+        this.Password = a;
     }
 
     public String getPassword() {
@@ -34,7 +34,7 @@ public class UserEntityClass {
     }
 
     public void setNickname(String a) {
-        Nickname = a;
+        this.Nickname = a;
     }
 
     public String getNickname() {
@@ -42,7 +42,7 @@ public class UserEntityClass {
     }
 
     public void setGender(String a) {
-        Gender = a;
+        this.Gender = a;
     }
 
     public String getGender() {
@@ -50,7 +50,7 @@ public class UserEntityClass {
     }
 
     public void setMajor(String a) {
-        Major = a;
+        this.Major = a;
     }
 
     public String getMajor() {
@@ -58,7 +58,7 @@ public class UserEntityClass {
     }
 
     public void setBirthday(String a) {
-        Birthday = a;
+        this.Birthday = a;
     }
 
     public String getBirthday() {
