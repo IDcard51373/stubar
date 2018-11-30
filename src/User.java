@@ -1,3 +1,7 @@
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 //用户的实体类
 
 public class User {
@@ -72,5 +76,9 @@ public class User {
 
     public String getPostnum() {
         return Postnum;
+    }
+
+    public String toString() {
+        return ("User [User_id = " + User_id + ", User_name = " + User_name + ", Password = " + Password + ", Nickname = " + Nickname + ", Gender = " + Gender + ", Major = " + Major + ", Birthday = " + Birthday + ", Postnum = " + Postnum + "]");
     }
 }
