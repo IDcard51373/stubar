@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>注册</title>
+	<title>编辑帖子</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/uikit.css">
@@ -41,52 +41,37 @@
 				</div>
 		</div>
 
-    <div class="uk-section-muted uk-padding-large">
-    	<div class="uk-card uk-card-default uk-card-body uk-width-2-3@m uk-align-center">
-		    <h3 class="uk-card-title uk-text-center">注册</h3>
+    		<div class="uk-section-muted uk-padding-large">
+    				<div class="uk-card uk-card-default uk-card-body uk-width-2-3@m uk-align-center">
+		    <h3 class="uk-card-title uk-text-center">编辑帖子</h3>
 		    <form class="uk-form-stacked">
 
 			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">用户名</label>
+			        <label class="uk-form-label" for="form-stacked-text">帖名</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text" type="text" name="User_name" placeholder="用户名">
+			            <input class="uk-input" id="form-stacked-text" type="text" name="Title" >
 			        </div>
 			    </div>
 
 			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">密码</label>
+			        <label class="uk-form-label" for="form-stacked-text">帖子内容</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input " id="form-stacked-text" type="password" name="Password" placeholder="密码应包含数字与字母，且长度大于16位">
-			        </div>
+			            <textarea class="uk-textarea" rows="5" id="form-stacked-text" placeholder="Textarea"></textarea>
 			    </div>
 
 			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">昵称</label>
-			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text" type="text" name="Nickname" placeholder="昵称">
-			        </div>
-			    </div>
-
-			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">专业</label>
-			        <div class="uk-form-controls">
-			            <input class="uk-input " id="form-stacked-text" name="Major" type="text" placeholder="请输入正确的邮箱">
-			        </div>
-			    </div>
-
-			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">生日</label>
-			        <div class="uk-form-controls">
-			            <input class="uk-input " id="form-stacked-text" name="Birthday" type="date" placeholder="输入11为手机号码">
-			        </div>
-			    </div>
-
-			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-select">性别</label>
+			        <label class="uk-form-label" for="form-stacked-select">板块</label>
 			        <div class="uk-form-controls">
 			            <select class="uk-select" id="form-stacked-select" name="Gender">
-			                <option>男</option>
-			                <option>女</option>
+			                <option >文学</option>
+			                <option >理学</option>
+			                <option >工学</option>
+			                <option >医学</option>
+			                <option >农学</option>
+			                <option >军事学</option>
+			                <option >管理学</option>
+			                <option >艺术学</option>
+			                <option >哲学</option>
 			            </select>
 			        </div>
 			    </div>
@@ -97,24 +82,12 @@
 			        </div>
 
 			    </div>
-
-
 			</form>
-
-		</div>
+					</div>
+    		</div>
+    	</form>
     </div>
-
-
-
-    
-    <!--
-    <div>
-        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light uk-width-2-3">
-            <h3 class="uk-card-title">Primary</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
-    </div>
-	-->
+</div>
 
 	<div class="uk-section-primary">
 	    <div class="uk-section uk-background-cover uk-light" style="background-image: url(imgs/bg1.jpg)">
@@ -138,6 +111,6 @@
 	        </div>
 	    </div>
 	</div>
-	
 </body>
 </html>
+
