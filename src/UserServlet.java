@@ -295,7 +295,7 @@ public class UserServlet extends HttpServlet {
         else {
             System.out.println("登陆成功");
             json.put("Result", User_id);
-            json.put("Nickname", DBControl.GetUserInfo(User_id)[1]);
+            json.put("Nickname", DBControl.DB_GetUserInfo(User_id)[1]);
         }
 
         try {
@@ -489,7 +489,7 @@ public class UserServlet extends HttpServlet {
 
         //从数据库获取数据
         String[] A = new String[6];
-        A = DBControl.GetUserInfo(User_id);
+        A = DBControl.DB_GetUserInfo(User_id);
 
         System.out.println("已经成功从数据库获取数据，用户的User_name为：" + A[0] + "，Nickname为：" + A[1] + "，Gender为：" + A[2] + "，Major为：" + A[3] + "，Birthday为：" + A[4] + "，发布帖子总数为：" + A[5]);
         json.put("User_name",A[0]);
@@ -546,8 +546,8 @@ public class UserServlet extends HttpServlet {
         String[] A = new String[5];
         String[] B = new String[5];
 
-        A = DBControl.GetPost(Post_id);
-        B = DBControl.GetComment(Post_id);
+        A = DBControl.DB_GetPost(Post_id);
+        B = DBControl.DB_GetComment(Post_id);
 
         System.out.println("已经从数据库获取数据：");
         System.out.println("Tittle：" + A[0]);
