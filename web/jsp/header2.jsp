@@ -16,16 +16,16 @@
     <script type="text/javascript" src="../js/uikit-icons.js"></script>
 </head>
 <body>
-    <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
+<div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
     <nav class="uk-background-primary uk-navbar-container" uk-navbar>
         <div class="uk-navbar-left">
-            <a class="uk-navbar-item uk-logo" href="index.jsp">Logo</a>
+            <a class="uk-navbar-item uk-logo" href="jsp/index.jsp">Logo</a>
         </div>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="index.jsp">首页</a></li>
+                <li class="uk-active"><a href="jsp/index.jsp">首页</a></li>
                 <li>
-                    <a href="writepost.jsp">发帖</a>
+                    <a href="jsp/writepost.jsp">发帖</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                             <li class="uk-active"><a href="#">Active</a></li>
@@ -34,9 +34,9 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="post.jsp">消息</a></li>
+                <li><a href="jsp/post.jsp">消息</a></li>
                 <li><a href="#">设置</a></li>
-                <li><a href="login.jsp">登陆</a></li>
+                <li><a href="jsp/login.jsp">登陆</a></li>
             </ul>
         </div>
     </nav>

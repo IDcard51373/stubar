@@ -47,10 +47,16 @@
                 </div>
 
             </div>
-
-
         </form>
 
+            <div class="uk-margin uk-text-center@s uk-text-muted  uk-text-small">
+                <div class="uk-width-1-2 uk-float-left ">
+                    <a href="register.jsp">注册新账号</a>
+                </div>
+                <div class="uk-width-1-2 uk-float-right uk-text-muted">
+                    <a href="#">找回密码</a>
+                </div>
+            </div>
 
          </div>
     </div>

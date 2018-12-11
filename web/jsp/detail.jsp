@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ include file="header.jsp" %>
+
 <html>
 <head>
     <title>学习论坛</title>
