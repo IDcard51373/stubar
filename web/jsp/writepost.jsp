@@ -34,14 +34,14 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-text">帖子内容</label>
                     <div class="uk-form-controls">
-                        <textarea class="uk-textarea" rows="5" id="form-stacked-text" placeholder="Textarea"></textarea>
+                        <textarea class="uk-textarea" rows="5" id="form-stacked-text" name="content" placeholder="Textarea"></textarea>
                     </div>
                 </div>
 
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-select">板块</label>
                     <div class="uk-form-controls">
-                        <select class="uk-select" id="form-stacked-select" name="Gender">
+                        <select class="uk-select" id="form-stacked-select" name="block">
                             <option >文学</option>
                             <option >理学</option>
                             <option >工学</option>
