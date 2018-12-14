@@ -205,6 +205,7 @@ public class UserServlet extends HttpServlet {
 
         System.out.println("开始注册");
 
+        DBControl dbcontrol = new DBControl();
         //获取数据
         String User_name = request.getParameter("User_name");
         String Password = request.getParameter("Password");
@@ -232,7 +233,7 @@ public class UserServlet extends HttpServlet {
         JSONObject json = new JSONObject();
 
         //录入数据库
-        if(DBControl.DB_Signin(A)) {
+        if(dbcontrol.DB_Signin(A)) {
             json.put("Result","0");
             System.out.println("注册成功");
         }
@@ -273,6 +274,8 @@ public class UserServlet extends HttpServlet {
 
         System.out.println("开始登陆");
 
+        DBControl dbcontrol = new DBControl();
+
         //获取数据
         String User_name = request.getParameter("User_name");
         String Password = request.getParameter("Password");
@@ -287,7 +290,7 @@ public class UserServlet extends HttpServlet {
 
         JSONObject json = new JSONObject();
 
-        String User_id = DBControl.DB_Login(A);
+        String User_id = dbcontrol.DB_Login(A);
         if(User_id.equals("0")) {
             System.out.println("登陆失败");
             json.put("Result","0");
@@ -295,7 +298,7 @@ public class UserServlet extends HttpServlet {
         else {
             System.out.println("登陆成功");
             json.put("Result", User_id);
-            json.put("Nickname", DBControl.GetUserInfo(User_id)[1]);
+            json.put("Nickname", dbcontrol.GetUserInfo(User_id)[1]);
         }
 
         try {
@@ -345,9 +348,11 @@ public class UserServlet extends HttpServlet {
 
         System.out.println("开始加载主页面");
 
+        DBControl dbcontrol = new DBControl();
+
         //查询数据
         String[][] A = new String[5][3];
-        A = DBControl.DB_GetMainPage();
+        A = dbcontrol.DB_GetMainPage();
 
         System.out.println("已经从数据库查询到数据，其中第一个帖子的Tittle为：" + A[0][1] + "，Post_id为：" + A[0][0] + "，PartContent为：" + A[0][2]);
         JSONObject json = new JSONObject();
@@ -426,7 +431,8 @@ public class UserServlet extends HttpServlet {
         //导出该板块最近刷新的5个帖子的Post_id、Title和Content的前50个字符，存在一个5*3的数组中。
         //String[][] DB_GetClassPage();
         String[][] A = new String[5][3];
-        A = DBControl.DB_GetClassPage(Class);
+        DBControl dbcontrol = new DBControl();
+        A = dbcontrol.DB_GetClassPage(Class);
 
         System.out.println("已经从数据库查询到数据，其中第一个帖子的Tittle为：" + A[0][1] + "，Post_id为：" + A[0][0] + "，PartContent为：" + A[0][2]);
         JSONObject json = new JSONObject();
@@ -489,7 +495,10 @@ public class UserServlet extends HttpServlet {
 
         //从数据库获取数据
         String[] A = new String[6];
-        A = DBControl.GetUserInfo(User_id);
+
+        DBControl dbcontrol = new DBControl();
+
+        A = dbcontrol.GetUserInfo(User_id);
 
         System.out.println("已经成功从数据库获取数据，用户的User_name为：" + A[0] + "，Nickname为：" + A[1] + "，Gender为：" + A[2] + "，Major为：" + A[3] + "，Birthday为：" + A[4] + "，发布帖子总数为：" + A[5]);
         json.put("User_name",A[0]);
@@ -546,8 +555,9 @@ public class UserServlet extends HttpServlet {
         String[] A = new String[5];
         String[] B = new String[5];
 
-        A = DBControl.GetPost(Post_id);
-        B = DBControl.GetComment(Post_id);
+        DBControl dbcontrol = new DBControl();
+        A = dbcontrol.GetPost(Post_id);
+        B = dbcontrol.GetComment(Post_id);
 
         System.out.println("已经从数据库获取数据：");
         System.out.println("Tittle：" + A[0]);
@@ -577,7 +587,7 @@ public class UserServlet extends HttpServlet {
         }
 
         //录入数据库
-        if(DBControl.DB_Signin(A)) {
+        if(dbcontrol.DB_Signin(A)) {
             json.put("Result","0");
             System.out.println("注册成功");
         }
@@ -639,8 +649,10 @@ public class UserServlet extends HttpServlet {
 
         JSONObject json = new JSONObject();
 
+        DBControl dbcontrol = new DBControl();
+
         //导入数据库
-        if(DBControl.DB_WritePost(A)) {
+        if(dbcontrol.DB_WritePost(A)) {
             System.out.println("录入数据库成功");
             json.put("Result","0");
         }
@@ -702,8 +714,10 @@ public class UserServlet extends HttpServlet {
 
         JSONObject json = new JSONObject();
 
+        DBControl dbcontrol = new DBControl();
+
         //导入数据库
-        if(DBControl.DB_WriteComment(A)) {
+        if(dbcontrol.DB_WriteComment(A)) {
             System.out.println("录入数据库成功");
             json.put("Result","0");
         }
