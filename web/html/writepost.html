@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>编辑帖子</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/uikit.css">
+	<link rel="stylesheet" type="text/css" href="../css/uikit-rtl.css">
+	<script type="text/javascript" src="../js/uikit.js"></script>
+	<script type="text/javascript" src="../js/uikit-icons.js"></script>
+</head>
+<body>
+
+		<div class="uk-section-primary uk-preserve-color">
+			 <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
+
+					<nav class="uk-navbar-container" uk-navbar>
+						 <div class="uk-navbar-left">
+						 	<a class="uk-navbar-item uk-logo" href="#">Logo</a>
+						 </div>
+						 <div class="uk-navbar-right">
+						 	<ul class="uk-navbar-nav">
+					            <li class="uk-active"><a href="#">首页</a></li>
+					            <li>
+					                <a href="#">话题</a>
+					                <div class="uk-navbar-dropdown">
+					                    <ul class="uk-nav uk-navbar-dropdown-nav">
+					                        <li class="uk-active"><a href="#">Active</a></li>
+					                        <li><a href="#">Item</a></li>
+					                        <li><a href="#">Item</a></li>
+					                    </ul>
+					                </div>
+					            </li>
+					            <li><a href="#">消息</a></li>
+					            <li><a href="#">设置</a></li>
+					            <li><a href="#">登陆</a></li>
+					        </ul>
+						 </div>
+					</nav>
+					
+				</div>
+		</div>
+
+    		<div class="uk-section-muted uk-padding-large">
+    				<div class="uk-card uk-card-default uk-card-body uk-width-2-3@m uk-align-center">
+						<h3 class="uk-card-title uk-text-center">编辑帖子</h3>
+						<form class="uk-form-stacked">
+
+							<div class="uk-margin">
+								<label class="uk-form-label" for="form-stacked-title">帖名</label>
+								<div class="uk-form-controls">
+									<input class="uk-input" id="form-stacked-title" type="text" name="Title" >
+								</div>
+							</div>
+
+							<div class="uk-margin">
+								<label class="uk-form-label" for="form-stacked-text">帖子内容</label>
+								<div class="uk-form-controls">
+									<textarea class="uk-textarea" rows="5" id="form-stacked-text" placeholder="Textarea"></textarea>
+								</div>
+							</div>
+
+							<div class="uk-margin">
+								<label class="uk-form-label" for="form-stacked-select">板块</label>
+								<div class="uk-form-controls">
+									<select class="uk-select" id="form-stacked-select" name="Gender">
+										<option >文学</option>
+										<option >理学</option>
+										<option >工学</option>
+										<option >医学</option>
+										<option >农学</option>
+										<option >军事学</option>
+										<option >管理学</option>
+										<option >艺术学</option>
+										<option >哲学</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="uk-margin">
+								<div class="uk-form-controls">
+									<input class="uk-input uk-button uk-button-primary"  type="submit">
+								</div>
+
+							</div>
+						</form>
+					</div>
+    		</div>
+
+
+
+	<div class="uk-section-primary">
+	    <div class="uk-section uk-background-cover uk-light" >
+	        <div class="uk-container">
+
+	            <h3>学习论坛</h3>
+	           
+
+	            <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+	                <div>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+	                </div>
+	                <div>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+	                </div>
+	                <div>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+	                </div>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>
+

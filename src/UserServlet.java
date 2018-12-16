@@ -155,28 +155,60 @@ public class UserServlet extends HttpServlet {
 
         switch(Method) {
             case "Register":
-                this.doRegister(request, response);
+                try {
+                    this.doRegister(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "Login":
-                this.doLogin(request, response);
+                try {
+                    this.doLogin(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "LoadMainPage":
-                this.doLoadMainPage(request, response);
+                try {
+                    this.doLoadMainPage(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "LoadClassPage":
-                this.doLoadClassPage(request, response);
+                try {
+                    this.doLoadClassPage(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "LoadPersonalPage":
-                this.doLoadPersonalPage(request, response);
+                try {
+                    this.doLoadPersonalPage(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "LoadPost":
-                this.doLoadPost(request, response);
+                try {
+                    this.doLoadPost(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "WritePost":
-                this.doWritePost(request, response);
+                try {
+                    this.doWritePost(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
             case "WriteComment":
-                this.doWriteComment(request, response);
+                try {
+                    this.doWriteComment(request, response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 break;
         }
     }
@@ -298,7 +330,9 @@ public class UserServlet extends HttpServlet {
         else {
             System.out.println("登陆成功");
             json.put("Result", User_id);
-            json.put("Nickname", dbcontrol.GetUserInfo(User_id)[1]);
+
+            json.put("Nickname", dbcontrol.DB_GetUserInfo(User_id)[1]);
+
         }
 
         try {
@@ -498,7 +532,9 @@ public class UserServlet extends HttpServlet {
 
         DBControl dbcontrol = new DBControl();
 
-        A = dbcontrol.GetUserInfo(User_id);
+
+        A = dbcontrol.DB_GetUserInfo(User_id);
+
 
         System.out.println("已经成功从数据库获取数据，用户的User_name为：" + A[0] + "，Nickname为：" + A[1] + "，Gender为：" + A[2] + "，Major为：" + A[3] + "，Birthday为：" + A[4] + "，发布帖子总数为：" + A[5]);
         json.put("User_name",A[0]);
@@ -556,8 +592,11 @@ public class UserServlet extends HttpServlet {
         String[] B = new String[5];
 
         DBControl dbcontrol = new DBControl();
-        A = dbcontrol.GetPost(Post_id);
-        B = dbcontrol.GetComment(Post_id);
+
+
+        A = dbcontrol.DB_GetPost(Post_id);
+        B = dbcontrol.DB_GetComment(Post_id);
+
 
         System.out.println("已经从数据库获取数据：");
         System.out.println("Tittle：" + A[0]);
