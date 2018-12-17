@@ -23,13 +23,13 @@
         <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-align-center">
         <img src="../imgs/shot.jpg" class="uk-width-1-3 uk-align-center" >
 
-            <form class="uk-form uk-from-horizontal uk-margin">
+            <form class="uk-form uk-from-horizontal uk-margin" action="/UserServlet" method="post">
 
 
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-horizontal-text">用户名</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="text" name="username" placeholder="输入用户名">
+                    <input class="uk-input" id="form-horizontal-text" type="text" name="User_name" placeholder="输入用户名">
                 </div>
 
             </div>
@@ -37,7 +37,7 @@
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-horizontal-password">密码</label>
                 <div class="">
-                    <input class="uk-input " id="form-horizontal-password" type="password" name="password" placeholder="密码应包含数字与字母，且长度大于16位">
+                    <input class="uk-input " id="form-horizontal-password" type="password" name="Password" placeholder="密码应包含数字与字母，且长度大于16位">
                 </div>
             </div>
 

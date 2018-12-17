@@ -25,12 +25,11 @@
             <ul class="uk-navbar-nav">
                 <li class="uk-active"><a href="jsp/index.jsp">首页</a></li>
                 <li>
-                    <a href="jsp/writepost.jsp">发帖</a>
+                    <a href="jsp/writepost.jsp">帖子</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-active"><a href="#">Active</a></li>
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
+                            <li><a href="#">发帖</a></li>
+                            <li><a href="#">看帖</a></li>
                         </ul>
                     </div>
                 </li>
